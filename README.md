@@ -15,12 +15,12 @@ If you do not have a openHAB configuration yet, you can start this Docker withou
 
 PULL
 =======
-```docker pull wetware/openhab2```
+```docker pull solderra/armhf-openhab2```
 
 Building
 ========
 
-```docker build -t <username>/openhab2 .```
+```docker build -t <username>/armhf-openhab2 .```
 
 Auto-detect of devices with UPnP
 ==========
@@ -94,38 +94,38 @@ Running
 Example: run command (with your openHAB config)
 
 ```
-docker run -d -p 8080:8080 -v /tmp/configuration:/etc/openhab/ wetware/openhab2
+docker run -d -p 8080:8080 -v /tmp/configuration:/etc/openhab/ solderra/armhf-openhab2
 ```
 
 Example: run command (with your openHAB config) and use hosts network if to enable UPnP auto-detect feature (see above)
 
 ```
-docker run -d -p 8080:8080 --net=host -v /tmp/configuration:/etc/openhab/ wetware/openhab2
+docker run -d -p 8080:8080 --net=host -v /tmp/configuration:/etc/openhab/ solderra/armhf-openhab2
 
 ```
 
 Example: run command (with your openHAB config) and populate the service directory with example plugin configuration files 
 
 ```
-docker run -d -p 8080:8080 -v /tmp/configuration:/etc/openhab/ -e "EXAMPLE_CONF=1" wetware/openhab2
+docker run -d -p 8080:8080 -v /tmp/configuration:/etc/openhab/ -e "EXAMPLE_CONF=1" solderra/armhf-openhab2
 ```
 
 Example: Map configuration and logging directory as well as allow access to Supervisor:
 
 ```
-docker run -d -p 8080:8080 -p 9001:9001 -v /tmp/configurations/:/etc/openhab -v /tmp/logs:/opt/openhab/userdata/logs wetware/openhab2
+docker run -d -p 8080:8080 -p 9001:9001 -v /tmp/configurations/:/etc/openhab -v /tmp/logs:/opt/openhab/userdata/logs solderra/armhf-openhab2
 ```
 
 Example: Map configuration directory and userdata (to allow persistence in Paper UI and Thing configurations) as well as allow access to Supervisor:
 
 ```
-docker run -d -p 8080:8080 -p 9001:9001 -v /tmp/configurations/:/etc/openhab -v /tmp/userdata:/opt/openhab/userdata wetware/openhab2
+docker run -d -p 8080:8080 -p 9001:9001 -v /tmp/configurations/:/etc/openhab -v /tmp/userdata:/opt/openhab/userdata solderra/armhf-openhab2
 ```
 
 Example: run command (with Demo)
 
 ```
-docker run -d -p 8080:8080 wetware/openhab2
+docker run -d -p 8080:8080 solderra/armhf-openhab2
 ```
 
 Start the Demo with: 
@@ -173,4 +173,5 @@ Contributors
 * dprus
 * tdeckers
 * wetware
+* solderra
 
