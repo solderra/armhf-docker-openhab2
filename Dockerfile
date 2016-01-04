@@ -49,10 +49,10 @@ RUN echo "Downloading OpenHAB2 addons..." \
 #
 # Download OpenHAB2 demo configuration
 #
-RUN "Downloading OpenHAB2 demo..." \
+RUN echo "Downloading OpenHAB2 demo..." \
 	&& wget --quiet --no-cookies -O /tmp/demo.zip https://openhab.ci.cloudbees.com/job/openHAB2/lastSuccessfulBuild/artifact/distribution/target/distribution-2.0.0-SNAPSHOT-demo.zip \
 	&& echo "Extracting OpenHAB2 demo..." \
-	&& mkdir /opt/openhab/demo-configuration \
+	&& mkdir -p /opt/openhab/demo-configuration \
 	&& unzip -q -d /opt/openhab/demo-configuration /tmp/demo.zip \
 	&& rm /tmp/demo.zip
 
